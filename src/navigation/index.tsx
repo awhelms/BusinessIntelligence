@@ -1,21 +1,13 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
-import * as React from 'react';
+import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import 'react-native-gesture-handler';
-import Businesses from './screens/Businesses';
-import BusinessDetail from './screens/BusinessDetail';
+
+import {Businesses} from '../screens/Businesses';
+import {BusinessDetail} from '../screens/BusinessDetail';
 
 const MainNavigator = createStackNavigator();
 
-const App = () => {
+export const RootNav = () => {
   return (
     <NavigationContainer>
       <MainNavigator.Navigator>
@@ -24,6 +16,4 @@ const App = () => {
       </MainNavigator.Navigator>
     </NavigationContainer>
   );
-};
-
-export default App;
+}

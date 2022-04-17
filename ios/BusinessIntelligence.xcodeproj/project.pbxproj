@@ -19,6 +19,8 @@
 		6D6D757E99570A5EAC315F3D /* libPods-BusinessIntelligence.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B435BCE0A5593DE12551EC /* libPods-BusinessIntelligence.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9C4AB8235AFDC173C3938361 /* libPods-BusinessIntelligence-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A7E546C97F5404835767D97 /* libPods-BusinessIntelligence-tvOS.a */; };
+		F011772B280B3291000BA852 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0117729280B3291000BA852 /* MaterialCommunityIcons.ttf */; };
+		F011772C280B3291000BA852 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F011772A280B3291000BA852 /* MaterialIcons.ttf */; };
 		FDB687ADE1D69EF7CAB7D0BC /* libPods-BusinessIntelligence-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A221ACC2FC4A6926D385A8A /* libPods-BusinessIntelligence-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,8 @@
 		C1DC36D21032F2FDC48162C5 /* Pods-BusinessIntelligence-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusinessIntelligence-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BusinessIntelligence-tvOSTests/Pods-BusinessIntelligence-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		F0117729280B3291000BA852 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		F011772A280B3291000BA852 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		FECA8E3F70549BFF3DC7CB97 /* Pods-BusinessIntelligence-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusinessIntelligence-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusinessIntelligence-tvOSTests/Pods-BusinessIntelligence-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +129,7 @@
 		13B07FAE1A68108700A75B9A /* BusinessIntelligence */ = {
 			isa = PBXGroup;
 			children = (
+				F0117728280B327D000BA852 /* Fonts */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -195,6 +200,15 @@
 				C1DC36D21032F2FDC48162C5 /* Pods-BusinessIntelligence-tvOSTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F0117728280B327D000BA852 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F0117729280B3291000BA852 /* MaterialCommunityIcons.ttf */,
+				F011772A280B3291000BA852 /* MaterialIcons.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,7 +355,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F011772C280B3291000BA852 /* MaterialIcons.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				F011772B280B3291000BA852 /* MaterialCommunityIcons.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
