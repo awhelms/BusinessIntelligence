@@ -1,11 +1,12 @@
 import React, { useEffect, useMemo } from 'react';
-import { FlatList, ListRenderItem, View, Text, ActivityIndicator, StyleSheet } from 'react-native';
+import { FlatList, ListRenderItem, View, Text, ActivityIndicator, StyleSheet, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
 import { useBusiness } from '../context';
 import { Business } from '../types';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Colors } from '../theme';
+import { RevenueTrend } from '../components/RevenueTrend';
 
 export const createRenderBusinessItem = 
   (navigate: (routeName: string, params: any) => void): ListRenderItem<Business> => 
@@ -16,9 +17,10 @@ export const createRenderBusinessItem =
       return (
         <TouchableOpacity onPress={onPress}>
           <View style={styles.rowContainer}>
+            <RevenueTrend business={business} style={styles.trend} />
             <View style={styles.businessData}>
-              <Text>{name}</Text>
-              <Text>{location.city}</Text>
+              <Text style={styles.primaryText}>{name}</Text>
+              <Text style={styles.secondaryText}>{location.city}</Text>
             </View>
             <MaterialIcon name='chevron-right' size={24} color='black' style={styles.icon} />
           </View>
@@ -82,11 +84,24 @@ const styles = StyleSheet.create({
     borderBottomColor: 'rgba(0, 0, 0, 0.08)',
     backgroundColor: 'white',
     flexDirection: 'row',
+    alignItems: 'center',
   },
   businessData: {
     flex: 1,
   },
+  trend: {
+    marginRight: 16,
+  },
   icon: {
     marginLeft: 16,
+  },
+  primaryText: {
+    color: Colors.text.dark,
+    fontSize: 16,
+    marginBottom: 2,
+  },
+  secondaryText: {
+    color: Colors.text.medium,
+    fontSize: 14,
   },
 })
